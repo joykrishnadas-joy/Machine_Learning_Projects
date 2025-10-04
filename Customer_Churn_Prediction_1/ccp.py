@@ -8,8 +8,8 @@ import streamlit as st
 import pickle 
 import numpy as np
 
-loaded_scaler = pickle.load(open("ML Full Project/Customer Churn Prediction (1)/scaler.pkl", "rb"))
-loaded_model = pickle.load(open("ML Full Project/Customer Churn Prediction (1)/model.pkl", "rb"))
+loaded_scaler = pickle.load(open("Customer_Churn_Prediction_1/scaler.pkl", "rb"))
+loaded_model = pickle.load(open("Customer_Churn_Prediction_1/model.pkl", "rb"))
 
 
 st.title("Churn Prediction App")
@@ -49,3 +49,4 @@ if predictbutton:
 
 else:
     st.write("please enter the values and use predict button")    
+
