@@ -6,7 +6,7 @@ import pickle
 from datetime import datetime
 
 # Load trained ML model
-model = pickle.load(open("Regression_Projects/Car_Price_Prediction_1/CPP_1_model.pkl", "rb"))
+model = pickle.load(open("CPP_1_model.pkl", "rb"))
 
 st.title("🚗 Car Selling Price Prediction")
 
@@ -34,4 +34,5 @@ if st.button("Predict Selling Price"):
     prediction = model.predict(input_data)[0]
 
     st.success(f"💰 Predicted Selling Price: ₹ {prediction:.2f} Lakhs")
+
 
