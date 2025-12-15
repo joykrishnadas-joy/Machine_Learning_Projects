@@ -1,15 +1,12 @@
 
-import os
 import streamlit as st
 import numpy as np
 import pickle
 from datetime import datetime
 
 # Load trained ML model
-BASE_DIR = os.path.dirname(__file__)
-model_path = os.path.join(BASE_DIR, "CPP_1_model.pkl")
 
-loaded_model = pickle.load(open(model_path, "rb"))
+loaded_model = pickle.load(open(Regression_Projects\\Car_Price_Prediction_1\\CPP_1_model.pkl", "rb"))
 
 st.title("🚗 Car Selling Price Prediction")
 
@@ -37,6 +34,7 @@ if st.button("Predict Selling Price"):
     prediction = loaded_model.predict(input_data)[0]
 
     st.success(f"💰 Predicted Selling Price: ₹ {prediction:.2f} Lakhs")
+
 
 
 
